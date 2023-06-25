@@ -7,6 +7,9 @@ using Unity.MLAgents.Sensors;
 
 public class MoveToGoalAgent : Agent
 {
+    [SerializeField] private Material winMetarial;
+    [SerializeField] private Material loseMetarial;
+    [SerializeField] private MeshRenderer floorMeshRenderer;
     [SerializeField] private Transform targetTransform;
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -22,7 +25,7 @@ public class MoveToGoalAgent : Agent
     }
     public override void OnEpisodeBegin()
     {
-        transform.position = Vector3.zero;
+        transform.localPosition = Vector3.zero;
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
@@ -36,11 +39,13 @@ public class MoveToGoalAgent : Agent
         if (other.TryGetComponent<Wall>(out Wall wall))
         {
             SetReward(-1f);
+            floorMeshRenderer.material = loseMetarial;
             EndEpisode();
         }
         if (other.TryGetComponent<Goal>(out Goal goal))
         {
             SetReward(+1f);
+            floorMeshRenderer.material = winMetarial;
             EndEpisode();
         }
     }
