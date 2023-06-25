@@ -20,4 +20,28 @@ public class MoveToGoalAgent : Agent
         float moveSpeed = 1f;
         transform.position += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
     }
+    public override void OnEpisodeBegin()
+    {
+        transform.position = Vector3.zero;
+    }
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        //foreach (var idiot in idiots) {give us 100 }
+        ActionSegment<float> continueousActions = actionsOut.ContinuousActions;
+        continueousActions[0] = Input.GetAxisRaw("Horizontal");
+        continueousActions[1] = Input.GetAxisRaw("Vertical");
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<Wall>(out Wall wall))
+        {
+            SetReward(-1f);
+            EndEpisode();
+        }
+        if (other.TryGetComponent<Goal>(out Goal goal))
+        {
+            SetReward(+1f);
+            EndEpisode();
+        }
+    }
 }
