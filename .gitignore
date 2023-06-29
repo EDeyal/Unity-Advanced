@@ -10,6 +10,12 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 lib/
+[Ff]older/directorytobeignored/
+[Aa]ssets/Editor Default Resources/
+[Aa]ssets/ExternalDependencyManager/
+[Aa]ssets/Firebase/
+[Aa]ssets/Parse/
+[Aa]ssets/Plugins/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -47,11 +53,13 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+.bundle
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+.bundle
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -61,6 +69,7 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+.bundle
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -71,3 +80,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Ignore .bundle files
+.bundle
