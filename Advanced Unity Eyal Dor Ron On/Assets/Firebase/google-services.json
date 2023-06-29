@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "396457201350",
+    "project_id": "idoadvanced",
+    "storage_bucket": "idoadvanced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396457201350:android:400c7329fd92eb08d451c7",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.AdvancedUnityEyalDorRonOn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396457201350-phlet5lkbiarpsmaiatjiriv3f4l3qbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeqc196qNfTIjXazrIc07Z6W0Mc7HMSn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396457201350-phlet5lkbiarpsmaiatjiriv3f4l3qbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
