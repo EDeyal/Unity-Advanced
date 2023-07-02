@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1688034164",
+        "python_version": "3.7.9 (tags/v3.7.9:13c94747c7, Aug 17 2020, 18:58:18) [MSC v.1900 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\dorsh\\OneDrive\\Desktop\\degree\\unity\\UnityAdvanced\\Unity-Advanced\\Advanced Unity Eyal Dor Ron On\\venv\\Scripts\\mlagents-learn config/MoveToGoal.yaml --run-id=ConfigTest2",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.0+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1688034174"
+    },
+    "total": 9.9588687,
+    "count": 1,
+    "self": 0.0072803999999990765,
+    "children": {
+        "run_training.setup": {
+            "total": 0.07526479999999991,
+            "count": 1,
+            "self": 0.07526479999999991
+        },
+        "TrainerController.start_learning": {
+            "total": 9.876323500000002,
+            "count": 1,
+            "self": 9.580000000219968e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 9.876214,
+                    "count": 1,
+                    "self": 9.876214
+                },
+                "TrainerController._save_models": {
+                    "total": 1.3700000000227419e-05,
+                    "count": 1,
+                    "self": 1.3700000000227419e-05
+                }
+            }
+        }
+    }
+}
